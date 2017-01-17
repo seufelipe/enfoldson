@@ -1,0 +1,219 @@
+/*
+Theme Name: Enfoldson
+Description: An Enfold Child Theme
+Version: 1.0
+Author: The Website Shop
+Author URI: http://thewebsiteshop.ie
+Template: enfold
+*/
+@media screen and (max-width: 780px) {
+  .hide-on-mobile {
+    display: none !important;
+  }
+}
+
+/* body */
+#top {
+  /* So form fields inherit the main font */
+  /* Bold menu links look bad */
+  /* Reset the unbelievable Georgia Italic links at certain widgets */
+}
+
+#top a {
+  -webkit-transition: color .2s ease-in-out;
+  transition: color .2s ease-in-out;
+}
+
+#top a:hover, #top a:focus, #top a:visited {
+  text-decoration: none;
+}
+
+#top strong {
+  color: inherit;
+}
+
+#top .input-text,
+#top input[type="text"],
+#top input[type="input"],
+#top input[type="password"],
+#top input[type="email"],
+#top input[type="number"],
+#top input[type="url"],
+#top input[type="tel"],
+#top input[type="search"],
+#top textarea,
+#top select {
+  font-family: inherit;
+  font-size: 100%;
+}
+
+#top .phone-info {
+  font-size: .8em;
+  font-weight: normal;
+}
+
+#top .sub_menu {
+  font-size: .8em;
+}
+
+#top .sub_menu li {
+  border-right: none;
+}
+
+#top .sub_menu li:hover a {
+  text-decoration: none;
+}
+
+#top .sub_menu li.menu-item-has-children > a::after {
+  font-family: 'entypo-fontello';
+  content: '\e877';
+  margin-left: .3em;
+  opacity: .4;
+}
+
+#top .sub_menu a {
+  font-weight: normal;
+}
+
+#top .logo {
+  font-weight: bold;
+  font-size: 2em;
+}
+
+#top .logo a {
+  color: inherit;
+}
+
+#top .av-main-nav ul {
+  box-shadow: 0 2px 4px rgba(21, 17, 52, 0.3);
+  min-width: 240px;
+  width: auto;
+}
+
+#top .av-main-nav ul a {
+  display: block;
+  float: none;
+  line-height: 1.5;
+  padding: .5em 1em;
+  font-size: inherit;
+}
+
+#top .av-main-nav > li > a {
+  padding: 0 1em;
+  font-size: 1em;
+  font-weight: normal;
+}
+
+#top .av-main-nav .menu-item-has-children > a::after {
+  font-family: 'entypo-fontello';
+  content: '\e877';
+  margin-left: .3em;
+  opacity: .4;
+}
+
+#top .av-main-nav .menu-item-home .avia-menu-text {
+  display: none;
+}
+
+#top .av-main-nav .menu-item-home a::before {
+  content: '\e821';
+  font-family: 'entypo-fontello';
+  font-size: 120%;
+}
+
+#top .av-main-nav .menu-item-home .avia-menu-fx {
+  display: none;
+}
+
+#top .special_amp {
+  color: inherit;
+  font-family: inherit;
+  font-style: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+#top .widgettitle {
+  text-transform: none;
+  letter-spacing: normal;
+  font-size: 1em;
+}
+
+#top .recentcomments a,
+#top .widget_recent_entries a {
+  font-style: normal;
+  font-family: inherit;
+}
+
+#top .widget_nav_menu a {
+  padding: 0;
+}
+
+#top .widget_nav_menu a::before {
+  content: '\2015';
+  padding-right: .5em;
+}
+
+#top .button--itzel .avia-button {
+  overflow: hidden;
+  -webkit-transition: border-color 0.3s, color 0.3s;
+  transition: border-color 0.3s, color 0.3s;
+  -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+          transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+#top .button--itzel .avia-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150%;
+  height: 100%;
+  background: #37474f;
+  z-index: -1;
+  -webkit-transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
+          transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
+  -webkit-transform-origin: 0% 100%;
+          transform-origin: 0% 100%;
+  -webkit-transition: opacity 0.3s, background-color 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, background-color 0.3s, -webkit-transform 0.3s;
+  transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
+  transition: transform 0.3s, opacity 0.3s, background-color 0.3s, -webkit-transform 0.3s;
+}
+
+#top .button--itzel .avia-button:hover {
+  color: #fff;
+  border-color: #3f51b5;
+}
+
+#top .button--itzel .avia-button:hover::before {
+  opacity: 1;
+  background-color: #3f51b5;
+  -webkit-transform: rotate3d(0, 0, 1, 0deg);
+          transform: rotate3d(0, 0, 1, 0deg);
+  -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+          transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+/* A better top header default */
+#header_meta {
+  text-align: center;
+}
+
+#header_meta .phone-info:only-child {
+  float: none;
+}
+
+/* A better socket default */
+#socket {
+  text-align: center;
+}
+
+#socket a {
+  border-bottom: 1px dotted;
+}
+
+#socket .copyright:only-child {
+  float: none;
+}

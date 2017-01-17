@@ -1,0 +1,243 @@
+/*
+Theme Name: Enfoldson
+Description: An Enfold Child Theme
+Version: 1.0
+Author: The Website Shop
+Author URI: http://thewebsiteshop.ie
+Template: enfold
+*/
+
+$small-break: 480px !default;
+$medium-break: 780px !default;
+
+@mixin small() {
+    @media screen and (max-width: $small-break) {
+        @content;
+    }
+}
+
+@mixin medium() {
+    @media screen and (max-width: $medium-break) {
+        @content;
+    }
+}
+
+@mixin large() {
+    @media screen and (min-width: $medium-break) {
+        @content;
+    }
+}
+
+@mixin clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+.hide-on-mobile {
+    @include medium {
+        display: none!important
+    }
+}
+
+/* body */#top {
+
+    a {
+        transition: color .2s ease-in-out;
+
+        &:hover,
+        &:focus,
+        &:visited {
+            text-decoration: none;
+        }
+    }
+
+    strong {
+        color: inherit;
+    }
+
+    /* So form fields inherit the main font */
+    .input-text,
+    input[type="text"],
+    input[type="input"],
+    input[type="password"],
+    input[type="email"],
+    input[type="number"],
+    input[type="url"],
+    input[type="tel"],
+    input[type="search"],
+    textarea,
+    select {
+        font-family: inherit;
+        font-size: 100%;
+    }
+
+    .phone-info {
+        font-size: .8em;
+        font-weight: normal;
+    }
+
+    .sub_menu {
+        font-size: .8em;
+
+        li {
+            border-right: none;
+
+            &:hover a { text-decoration: none; }
+
+            &.menu-item-has-children > a::after {
+                font-family: 'entypo-fontello';
+                content: '\e877';
+                margin-left: .3em;
+                opacity: .4;
+            }
+        }
+
+        a {
+            font-weight: normal;
+        }
+    }
+
+    .logo {
+        font-weight: bold;
+        font-size: 2em;
+
+        a {
+            color: inherit;
+        }
+    }
+
+    /* Bold menu links look bad */
+    .av-main-nav {
+        ul {
+            box-shadow: 0 2px 4px rgba(21, 17, 52, .3);
+            min-width: 240px;
+            width: auto;
+
+            a {
+                display: block;
+                float: none;
+                line-height: 1.5;
+                padding: .5em 1em;
+                font-size: inherit;
+            }
+        }
+
+        > li > a {
+            padding: 0 1em;
+            font-size: 1em;
+            font-weight: normal;
+        }
+
+        .menu-item-has-children > a::after {
+            font-family: 'entypo-fontello';
+            content: '\e877';
+            margin-left: .3em;
+            opacity: .4;
+        }
+
+        // Little House icon for home link
+        .menu-item-home {
+            .avia-menu-text {
+                display: none;
+            }
+
+            a::before {
+                content: '\e821';
+                font-family: 'entypo-fontello';
+                font-size: 120%;
+            }
+
+            .avia-menu-fx { display: none; }
+        }
+    }
+
+    .special_amp {
+        color: inherit;
+        font-family: inherit;
+        font-style: inherit;
+        font-size: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+    }
+
+    .widgettitle {
+        text-transform: none;
+        letter-spacing: normal;
+        font-size: 1em;
+    }
+
+    /* Reset the unbelievable Georgia Italic links at certain widgets */
+    .recentcomments a,
+    .widget_recent_entries a {
+        font-style: normal;
+        font-family: inherit;
+    }
+
+    .widget_nav_menu a {
+        padding: 0;
+
+        &::before {
+            content: '\2015';
+            padding-right: .5em;
+        }
+    }
+
+    .button--itzel {
+        .avia-button {
+            overflow: hidden;
+            transition: border-color 0.3s, color 0.3s;
+            transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 150%;
+                height: 100%;
+                background: #37474f;
+                z-index: -1;
+                transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
+                transform-origin: 0% 100%;
+                transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
+            }
+
+            &:hover {
+                color: #fff;
+                border-color: #3f51b5;
+
+                &::before {
+                    opacity: 1;
+                    background-color: #3f51b5;
+                    transform: rotate3d(0, 0, 1, 0deg);
+                    transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+                }
+            }
+        }
+    }
+}
+
+/* A better top header default */
+#header_meta {
+    text-align: center;
+
+    .phone-info:only-child {
+        float: none;
+    }
+}
+
+/* A better socket default */
+#socket {
+    text-align: center;
+
+    a {
+        border-bottom: 1px dotted;
+    }
+
+    .copyright:only-child {
+        float: none;
+    }
+}
