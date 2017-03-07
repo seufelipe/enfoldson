@@ -55,27 +55,4 @@ function tws_avf_google_content_font($fonts) {
 add_filter( 'avf_google_content_font',  'tws_avf_google_content_font');
 
 
-function avf_text_logo_final_output( $logo ) {
-
-    $link = home_url('/');
-    $headline_type = "span";
-
-    if( $logo = avia_get_option('logo') )
-    {
-         $logo = apply_filters('avf_logo', $logo);
-         if(is_numeric($logo)){ $logo = wp_get_attachment_image_src($logo, 'full'); $logo = $logo[0]; }
-         $logo = "<img {$dimension} src='{$logo}' alt='{$alt}' />";
-         $logo = "<$headline_type class='logo'><a href='".$link."'>".$logo."</a></$headline_type>";
-    }
-    else
-    {
-        $logo = get_bloginfo('name');
-        $logo = "<$headline_type class='logo'><a href='".$link."'>".$logo."</a></$headline_type>";
-    }
-
-    return $logo;
-}
-add_filter( 'avf_logo_final_output', 'avf_text_logo_final_output' );
-
-
 ?>
