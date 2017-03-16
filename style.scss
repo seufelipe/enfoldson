@@ -109,6 +109,11 @@ $medium-break: 780px !default;
         }
     }
 
+    /* For some reason this has to be reset */
+    .avia-section {
+        min-height: 0;
+    }
+
     /* Bold menu links look bad */
     .av-main-nav {
         ul {

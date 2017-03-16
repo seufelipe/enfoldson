@@ -15,6 +15,7 @@ Template: enfold
 /* body */
 #top {
   /* So form fields inherit the main font */
+  /* For some reason this has to be reset */
   /* Bold menu links look bad */
   /*  New icons for the mobile menu */
   /* Reset the unbelievable Georgia Italic links at certain widgets */
@@ -83,6 +84,10 @@ Template: enfold
 
 #top .logo a {
   color: inherit;
+}
+
+#top .avia-section {
+  min-height: 0;
 }
 
 #top .av-main-nav ul {
