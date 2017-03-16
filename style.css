@@ -177,6 +177,11 @@ Template: enfold
 }
 
 @media screen and (max-width: 480px) {
+  #top {
+    /* This makes all min-height settings to appear only on Desktop */
+    /* This makes the padding
+        for color sections on mobile always to be "Small" */
+  }
   #top .av-minimum-height-25 .container,
   #top .av-minimum-height-25 > .flex_cell,
   #top .av-minimum-height-50 .container,
@@ -186,6 +191,15 @@ Template: enfold
   #top .av-minimum-height-100 .container,
   #top .av-minimum-height-100 > .flex_cell {
     height: auto;
+  }
+  #top .avia-section-default .content,
+  #top .avia-section-default .sidebar,
+  #top .avia-section-large .content,
+  #top .avia-section-large .sidebar,
+  #top .avia-section-huge .content,
+  #top .avia-section-huge .sidebar {
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 }
 

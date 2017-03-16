@@ -208,6 +208,7 @@ $medium-break: 780px !default;
     }
 
     @include small {
+        /* This makes all min-height settings to appear only on Desktop */
         .av-minimum-height-25,
         .av-minimum-height-50,
         .av-minimum-height-75,
@@ -215,6 +216,18 @@ $medium-break: 780px !default;
             .container,
             > .flex_cell {
                 height: auto;
+            }
+        }
+
+        /* This makes the padding
+        for color sections on mobile always to be "Small" */
+        .avia-section-default,
+        .avia-section-large,
+        .avia-section-huge {
+            .content,
+            .sidebar {
+                padding-top: 20px;
+                padding-bottom: 20px;
             }
         }
     }
