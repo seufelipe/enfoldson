@@ -171,6 +171,19 @@ Template: enfold
   padding-right: .5em;
 }
 
+@media screen and (max-width: 480px) {
+  #top .av-minimum-height-25 .container,
+  #top .av-minimum-height-25 > .flex_cell,
+  #top .av-minimum-height-50 .container,
+  #top .av-minimum-height-50 > .flex_cell,
+  #top .av-minimum-height-75 .container,
+  #top .av-minimum-height-75 > .flex_cell,
+  #top .av-minimum-height-100 .container,
+  #top .av-minimum-height-100 > .flex_cell {
+    height: auto;
+  }
+}
+
 /* A better top header default */
 #header_meta {
   text-align: center;

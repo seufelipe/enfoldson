@@ -201,6 +201,18 @@ $medium-break: 780px !default;
             padding-right: .5em;
         }
     }
+
+    @include small {
+        .av-minimum-height-25,
+        .av-minimum-height-50,
+        .av-minimum-height-75,
+        .av-minimum-height-100 {
+            .container,
+            > .flex_cell {
+                height: auto;
+            }
+        }
+    }
 }
 
 /* A better top header default */
