@@ -16,6 +16,7 @@ Template: enfold
 #top {
   /* So form fields inherit the main font */
   /* Bold menu links look bad */
+  /*  New icons for the mobile menu */
   /* Reset the unbelievable Georgia Italic links at certain widgets */
 }
 
@@ -123,6 +124,21 @@ Template: enfold
 
 #top .av-main-nav .menu-item-home .avia-menu-fx {
   display: none;
+}
+
+#top #advanced_menu_toggle,
+#top #advanced_menu_hide {
+  border: 0;
+  border-radius: 0;
+  font-size: 36px;
+}
+
+#top #advanced_menu_toggle::before {
+  content: '\e811';
+}
+
+#top #advanced_menu_hide::before {
+  content: '\00D7';
 }
 
 #top .special_amp {

@@ -154,6 +154,23 @@ $medium-break: 780px !default;
         }
     }
 
+
+    /*  New icons for the mobile menu */
+    #advanced_menu_toggle,
+    #advanced_menu_hide {
+        border: 0;
+        border-radius: 0;
+        font-size: 36px;
+    }
+
+    #advanced_menu_toggle::before {
+        content: '\e811';
+    }
+
+    #advanced_menu_hide::before {
+        content: '\00D7';
+    }
+
     .special_amp {
         color: inherit;
         font-family: inherit;
