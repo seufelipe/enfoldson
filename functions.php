@@ -54,5 +54,16 @@ function tws_avf_google_content_font($fonts) {
 }
 add_filter( 'avf_google_content_font',  'tws_avf_google_content_font');
 
+/**
+ * Simple shortcode to display current year
+ * useful for the Copyright message
+ */
+function tws_year_shortcode() {
+    $year = date( 'Y' );
+
+    return $year;
+}
+add_shortcode( 'year', 'tws_year_shortcode' );
+
 
 ?>
