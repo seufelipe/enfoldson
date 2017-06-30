@@ -29,20 +29,20 @@ $medium-break: 780px !default;
 }
 
 @mixin clearfix {
-    &:after {
+    &::after {
+        clear: both;
         content: "";
         display: table;
-        clear: both;
     }
 }
 
 .hide-on-mobile {
     @include medium {
-        display: none!important
+        display: none !important;
     }
 }
 
-/* body */#top {
+#top {
 
     a {
         transition: color .2s ease-in-out;
@@ -58,8 +58,7 @@ $medium-break: 780px !default;
         color: inherit;
     }
 
-    /* So form fields inherit the main font */
-    .input-text,
+    // So form fields inherit the main font
     input[type="text"],
     input[type="input"],
     input[type="password"],
@@ -83,13 +82,13 @@ $medium-break: 780px !default;
         font-size: .8em;
 
         li {
-            border-right: none;
+            border-right: 0;
 
             &:hover a { text-decoration: none; }
 
             &.menu-item-has-children > a::after {
-                font-family: 'entypo-fontello';
                 content: '\e877';
+                font-family: 'entypo-fontello';
                 margin-left: .3em;
                 opacity: .4;
             }
@@ -101,20 +100,20 @@ $medium-break: 780px !default;
     }
 
     .logo {
-        font-weight: bold;
         font-size: 2em;
+        font-weight: bold;
 
         a {
             color: inherit;
         }
     }
 
-    /* For some reason this has to be reset */
+    // For some reason this has to be reset
     .avia-section {
         min-height: 0;
     }
 
-    /* Bold menu links look bad */
+    // Bold menu links look bad
     .av-main-nav {
         ul {
             box-shadow: 0 2px 4px rgba(21, 17, 52, .3);
@@ -124,21 +123,21 @@ $medium-break: 780px !default;
             a {
                 display: block;
                 float: none;
+                font-size: inherit;
                 line-height: 1.5;
                 padding: .5em 1em;
-                font-size: inherit;
             }
         }
 
         > li > a {
-            padding: 0 1em;
             font-size: 1em;
             font-weight: normal;
+            padding: 0 1em;
         }
 
         .menu-item-has-children > a::after {
-            font-family: 'entypo-fontello';
             content: '\e877';
+            font-family: 'entypo-fontello';
             margin-left: .3em;
             opacity: .4;
         }
@@ -159,8 +158,7 @@ $medium-break: 780px !default;
         }
     }
 
-
-    /*  New icons for the mobile menu */
+    //  New icons for the mobile menu
     #advanced_menu_toggle,
     #advanced_menu_hide {
         border: 0;
@@ -179,23 +177,23 @@ $medium-break: 780px !default;
     .special_amp {
         color: inherit;
         font-family: inherit;
-        font-style: inherit;
         font-size: inherit;
+        font-style: inherit;
         font-weight: inherit;
         line-height: inherit;
     }
 
     .widgettitle {
-        text-transform: none;
-        letter-spacing: normal;
         font-size: 1em;
+        letter-spacing: normal;
+        text-transform: none;
     }
 
-    /* Reset the unbelievable Georgia Italic links at certain widgets */
+    // Reset the unbelievable Georgia Italic links at certain widgets
     .recentcomments a,
     .widget_recent_entries a {
-        font-style: normal;
         font-family: inherit;
+        font-style: normal;
     }
 
     .widget_nav_menu a {
@@ -208,7 +206,7 @@ $medium-break: 780px !default;
     }
 
     @include small {
-        /* This makes all min-height settings to appear only on Desktop */
+        // This makes all min-height settings to appear only on Desktop
         .av-minimum-height-25,
         .av-minimum-height-50,
         .av-minimum-height-75,
@@ -219,21 +217,20 @@ $medium-break: 780px !default;
             }
         }
 
-        /* This makes the padding
-        for color sections on mobile always to be "Small" */
+        // This makes the padding for color sections on mobile always to be "Small"
         .avia-section-default,
         .avia-section-large,
         .avia-section-huge {
             .content,
             .sidebar {
-                padding-top: 20px;
                 padding-bottom: 20px;
+                padding-top: 20px;
             }
         }
     }
 }
 
-/* A better top header default */
+// A better top header default
 #header_meta {
     text-align: center;
 
@@ -242,7 +239,7 @@ $medium-break: 780px !default;
     }
 }
 
-/* A better socket default */
+// A better socket default
 #socket {
     text-align: center;
 

@@ -12,17 +12,7 @@ Template: enfold
   }
 }
 
-/* body */
-#top {
-  /* So form fields inherit the main font */
-  /* For some reason this has to be reset */
-  /* Bold menu links look bad */
-  /*  New icons for the mobile menu */
-  /* Reset the unbelievable Georgia Italic links at certain widgets */
-}
-
 #top a {
-  -webkit-transition: color .2s ease-in-out;
   transition: color .2s ease-in-out;
 }
 
@@ -34,7 +24,6 @@ Template: enfold
   color: inherit;
 }
 
-#top .input-text,
 #top input[type="text"],
 #top input[type="input"],
 #top input[type="password"],
@@ -59,7 +48,7 @@ Template: enfold
 }
 
 #top .sub_menu li {
-  border-right: none;
+  border-right: 0;
 }
 
 #top .sub_menu li:hover a {
@@ -67,8 +56,8 @@ Template: enfold
 }
 
 #top .sub_menu li.menu-item-has-children > a::after {
-  font-family: 'entypo-fontello';
   content: '\e877';
+  font-family: 'entypo-fontello';
   margin-left: .3em;
   opacity: .4;
 }
@@ -78,8 +67,8 @@ Template: enfold
 }
 
 #top .logo {
-  font-weight: bold;
   font-size: 2em;
+  font-weight: bold;
 }
 
 #top .logo a {
@@ -99,20 +88,20 @@ Template: enfold
 #top .av-main-nav ul a {
   display: block;
   float: none;
+  font-size: inherit;
   line-height: 1.5;
   padding: .5em 1em;
-  font-size: inherit;
 }
 
 #top .av-main-nav > li > a {
-  padding: 0 1em;
   font-size: 1em;
   font-weight: normal;
+  padding: 0 1em;
 }
 
 #top .av-main-nav .menu-item-has-children > a::after {
-  font-family: 'entypo-fontello';
   content: '\e877';
+  font-family: 'entypo-fontello';
   margin-left: .3em;
   opacity: .4;
 }
@@ -149,22 +138,22 @@ Template: enfold
 #top .special_amp {
   color: inherit;
   font-family: inherit;
-  font-style: inherit;
   font-size: inherit;
+  font-style: inherit;
   font-weight: inherit;
   line-height: inherit;
 }
 
 #top .widgettitle {
-  text-transform: none;
-  letter-spacing: normal;
   font-size: 1em;
+  letter-spacing: normal;
+  text-transform: none;
 }
 
 #top .recentcomments a,
 #top .widget_recent_entries a {
-  font-style: normal;
   font-family: inherit;
+  font-style: normal;
 }
 
 #top .widget_nav_menu a {
@@ -177,11 +166,6 @@ Template: enfold
 }
 
 @media screen and (max-width: 480px) {
-  #top {
-    /* This makes all min-height settings to appear only on Desktop */
-    /* This makes the padding
-        for color sections on mobile always to be "Small" */
-  }
   #top .av-minimum-height-25 .container,
   #top .av-minimum-height-25 > .flex_cell,
   #top .av-minimum-height-50 .container,
@@ -198,12 +182,11 @@ Template: enfold
   #top .avia-section-large .sidebar,
   #top .avia-section-huge .content,
   #top .avia-section-huge .sidebar {
-    padding-top: 20px;
     padding-bottom: 20px;
+    padding-top: 20px;
   }
 }
 
-/* A better top header default */
 #header_meta {
   text-align: center;
 }
@@ -212,7 +195,6 @@ Template: enfold
   float: none;
 }
 
-/* A better socket default */
 #socket {
   text-align: center;
 }
