@@ -20,6 +20,15 @@ add_theme_support( 'deactivate_layerslider' );
 
 
 /**
+ * Activate debug mode
+ */
+function tws_builder_mode() {
+	return 'debug';
+}
+//add_action( 'avia_builder_mode', 'tws_builder_mode' );
+
+
+/**
  * Remove backlink to Enfold in the footer, sorry Kriesi
  */
 function tws_kriesi_backlink() {
@@ -53,6 +62,7 @@ function tws_avf_google_content_font($fonts) {
     return $fonts;
 }
 add_filter( 'avf_google_content_font',  'tws_avf_google_content_font');
+
 
 /**
  * Simple shortcode to display current year
