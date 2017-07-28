@@ -11,242 +11,242 @@ $small-break: 480px !default;
 $medium-break: 780px !default;
 
 @mixin small() {
-    @media screen and (max-width: $small-break) {
-        @content;
-    }
+  @media screen and (max-width: $small-break) {
+    @content;
+  }
 }
 
 @mixin medium() {
-    @media screen and (max-width: $medium-break) {
-        @content;
-    }
+  @media screen and (max-width: $medium-break) {
+    @content;
+  }
 }
 
 @mixin large() {
-    @media screen and (min-width: $medium-break) {
-        @content;
-    }
+  @media screen and (min-width: $medium-break) {
+    @content;
+  }
 }
 
 @mixin clearfix {
-    &::after {
-        clear: both;
-        content: "";
-        display: table;
-    }
+  &::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
 }
 
 .hide-on-mobile {
-    @include medium {
-        display: none !important;
-    }
+  @include medium {
+    display: none !important;
+  }
 }
 
 #top {
+  a {
+    transition: color .2s ease-in-out;
+
+    &:hover,
+    &:focus,
+    &:visited {
+      text-decoration: none;
+    }
+  }
+
+  strong {
+    color: inherit;
+  }
+
+  // So form fields inherit the main font
+  input[type="text"],
+  input[type="input"],
+  input[type="password"],
+  input[type="email"],
+  input[type="number"],
+  input[type="url"],
+  input[type="tel"],
+  input[type="search"],
+  textarea,
+  select {
+    font-family: inherit;
+    font-size: 100%;
+  }
+
+  .phone-info {
+    font-size: .8em;
+    font-weight: normal;
+  }
+
+  .sub_menu {
+    font-size: .8em;
+
+    li {
+      border-right: 0;
+
+      &:hover a { text-decoration: none; }
+
+      &.menu-item-has-children > a::after {
+        content: '\e877';
+        font-family: 'entypo-fontello';
+        margin-left: .3em;
+        opacity: .4;
+      }
+    }
+
     a {
-        transition: color .2s ease-in-out;
-
-        &:hover,
-        &:focus,
-        &:visited {
-            text-decoration: none;
-        }
+      font-weight: normal;
     }
+  }
 
-    strong {
-        color: inherit;
+  .logo {
+    font-size: 2em;
+    font-weight: bold;
+
+    a {
+      color: inherit;
     }
+  }
 
-    // So form fields inherit the main font
-    input[type="text"],
-    input[type="input"],
-    input[type="password"],
-    input[type="email"],
-    input[type="number"],
-    input[type="url"],
-    input[type="tel"],
-    input[type="search"],
-    textarea,
-    select {
-        font-family: inherit;
-        font-size: 100%;
-    }
+  // For some reason this has to be reset
+  .avia-section {
+    min-height: 0;
+  }
 
-    .phone-info {
-        font-size: .8em;
-        font-weight: normal;
-    }
+  // Bold menu links look bad
+  .av-main-nav {
+    ul {
+      box-shadow: 0 2px 4px rgba(21, 17, 52, .3);
+      min-width: 240px;
+      width: auto;
 
-    .sub_menu {
-        font-size: .8em;
-
-        li {
-            border-right: 0;
-
-            &:hover a { text-decoration: none; }
-
-            &.menu-item-has-children > a::after {
-                content: '\e877';
-                font-family: 'entypo-fontello';
-                margin-left: .3em;
-                opacity: .4;
-            }
-        }
-
-        a {
-            font-weight: normal;
-        }
-    }
-
-    .logo {
-        font-size: 2em;
-        font-weight: bold;
-
-        a {
-            color: inherit;
-        }
-    }
-
-    // For some reason this has to be reset
-    .avia-section {
-        min-height: 0;
-    }
-
-    // Bold menu links look bad
-    .av-main-nav {
-        ul {
-            box-shadow: 0 2px 4px rgba(21, 17, 52, .3);
-            min-width: 240px;
-            width: auto;
-
-            a {
-                display: block;
-                float: none;
-                font-size: inherit;
-                line-height: 1.5;
-                padding: .5em 1em;
-            }
-        }
-
-        > li > a {
-            font-size: 1em;
-            font-weight: normal;
-            padding: 0 1em;
-        }
-
-        .menu-item-has-children > a::after {
-            content: '\e877';
-            font-family: 'entypo-fontello';
-            margin-left: .3em;
-            opacity: .4;
-        }
-
-        // Little House icon for home link
-        .menu-item-home {
-            .avia-menu-text {
-                display: none;
-            }
-
-            a::before {
-                content: '\e821';
-                font-family: 'entypo-fontello';
-                font-size: 120%;
-            }
-
-            .avia-menu-fx { display: none; }
-        }
-    }
-
-    //  New icons for the mobile menu
-    #advanced_menu_toggle,
-    #advanced_menu_hide {
-        border: 0;
-        border-radius: 0;
-        font-size: 36px;
-    }
-
-    #advanced_menu_toggle::before {
-        content: '\e811';
-    }
-
-    #advanced_menu_hide::before {
-        content: '\00D7';
-    }
-
-    .special_amp {
-        color: inherit;
-        font-family: inherit;
+      a {
+        display: block;
+        float: none;
         font-size: inherit;
-        font-style: inherit;
-        font-weight: inherit;
-        line-height: inherit;
+        line-height: 1.5;
+        padding: .5em 1em;
+      }
     }
 
-    .widgettitle {
-        font-size: 1em;
-        letter-spacing: normal;
-        text-transform: none;
+    > li > a {
+      font-size: 1em;
+      font-weight: normal;
+      padding: 0 1em;
     }
 
-    // Reset the unbelievable Georgia Italic links at certain widgets
-    .recentcomments a,
-    .widget_recent_entries a {
-        font-family: inherit;
-        font-style: normal;
+    .menu-item-has-children > a::after {
+      content: '\e877';
+      font-family: 'entypo-fontello';
+      margin-left: .3em;
+      opacity: .4;
     }
 
-    .widget_nav_menu a {
-        padding: 0;
+    // Little House icon for home link
+    .menu-item-home {
+      .avia-menu-text {
+        display: none;
+      }
 
-        &::before {
-            content: '\2015';
-            padding-right: .5em;
-        }
+      a::before {
+        content: '\e821';
+        font-family: 'entypo-fontello';
+        font-size: 120%;
+      }
+
+      .avia-menu-fx { display: none; }
+    }
+  }
+
+  //  New icons for the mobile menu
+  #advanced_menu_toggle,
+  #advanced_menu_hide {
+    border: 0;
+    border-radius: 0;
+    font-size: 36px;
+  }
+
+  #advanced_menu_toggle::before {
+    content: '\e811';
+  }
+
+  #advanced_menu_hide::before {
+    content: '\00D7';
+  }
+
+  .special_amp {
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+  }
+
+  .widgettitle {
+    font-size: 1em;
+    letter-spacing: normal;
+    text-transform: none;
+  }
+
+  // Reset the unbelievable Georgia Italic links at certain widgets
+  .recentcomments a,
+  .widget_recent_entries a {
+    font-family: inherit;
+    font-style: normal;
+  }
+
+  .widget_nav_menu a {
+    padding: 0;
+
+    &::before {
+      content: '\2015';
+      padding-right: .5em;
+    }
+  }
+
+  @include small {
+    // This makes all min-height settings to appear only on Desktop
+    .av-minimum-height-25,
+    .av-minimum-height-50,
+    .av-minimum-height-75,
+    .av-minimum-height-100 {
+      .container,
+      > .flex_cell {
+        height: auto;
+      }
     }
 
-    @include small {
-        // This makes all min-height settings to appear only on Desktop
-        .av-minimum-height-25,
-        .av-minimum-height-50,
-        .av-minimum-height-75,
-        .av-minimum-height-100 {
-            .container,
-            > .flex_cell {
-                height: auto;
-            }
-        }
-
-        // This makes the padding for color sections on mobile always to be "Small"
-        .avia-section-default,
-        .avia-section-large,
-        .avia-section-huge {
-            .content,
-            .sidebar {
-                padding-bottom: 20px;
-                padding-top: 20px;
-            }
-        }
+    // This makes the padding for color sections on mobile always to be "Small"
+    .avia-section-default,
+    .avia-section-large,
+    .avia-section-huge {
+      .content,
+      .sidebar {
+        padding-bottom: 20px;
+        padding-top: 20px;
+      }
     }
+  }
 }
 
 // A better top header default
 #header_meta {
-    text-align: center;
+  text-align: center;
 
-    .phone-info:only-child {
-        float: none;
-    }
+  .phone-info:only-child {
+    float: none;
+  }
 }
 
 // A better socket default
 #socket {
-    text-align: center;
+  text-align: center;
 
-    a {
-        border-bottom: 1px dotted;
-    }
+  a {
+    border-bottom: 1px dotted;
+  }
 
-    .copyright:only-child {
-        float: none;
-    }
+  .copyright:only-child {
+    float: none;
+  }
 }
