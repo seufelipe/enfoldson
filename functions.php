@@ -14,6 +14,19 @@ add_theme_support( 'avia_disable_dummy_import' );
 
 
 /**
+ * Get rid of the custom.css
+ * Because child theme anyway
+ */
+function enfoldson_print_styles() {
+
+    wp_dequeue_style( 'avia-custom' );
+    wp_deregister_style( 'avia-custom' );
+
+}
+add_action( 'wp_print_styles', 'enfoldson_print_styles' );
+
+
+/**
  * Deactivate LayerSlider
  */
 add_theme_support( 'deactivate_layerslider' );
