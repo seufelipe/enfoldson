@@ -33,12 +33,18 @@ add_theme_support( 'deactivate_layerslider' );
 
 
 /**
- * Activate debug mode
+ * Activate Enfold Debug Mode for Super Admins
  */
-function tws_builder_mode() {
-	return 'debug';
+function enfoldson_builder_mode() {
+
+    return 'debug';
+
 }
-//add_action( 'avia_builder_mode', 'tws_builder_mode' );
+if ( is_super_admin() ) {
+
+  add_action( 'avia_builder_mode', 'enfoldson_builder_mode' );
+
+}
 
 
 /**
