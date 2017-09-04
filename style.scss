@@ -141,20 +141,20 @@ $medium-break: 780px !default;
       opacity: .4;
     }
 
-    // Little House icon for home link
-    .menu-item-home {
-      .avia-menu-text {
-        display: none;
-      }
-
-      a::before {
-        content: '\e821';
-        font-family: 'entypo-fontello';
-        font-size: 120%;
-      }
-
-      .avia-menu-fx { display: none; }
-    }
+    // // Little House icon for home link
+    // .menu-item-home {
+    //   .avia-menu-text {
+    //     display: none;
+    //   }
+    //
+    //   a::before {
+    //     content: '\e821';
+    //     font-family: 'entypo-fontello';
+    //     font-size: 120%;
+    //   }
+    //
+    //   .avia-menu-fx { display: none; }
+    // }
   }
 
   //  New icons for the mobile menu
@@ -195,12 +195,17 @@ $medium-break: 780px !default;
     font-style: normal;
   }
 
-  .widget_nav_menu a {
-    padding: 0;
+  .widget_nav_menu {
+    li {
+      font-size: 1rem;
+    }
 
-    &::before {
-      content: '\2015';
-      padding-right: .5em;
+    a {
+      padding: 0;
+
+      &::before {
+        content: '\2015\00a0';
+      }
     }
   }
 
@@ -240,6 +245,7 @@ $medium-break: 780px !default;
 
 // A better socket default
 #socket {
+  font-size: .8em;
   text-align: center;
 
   a {

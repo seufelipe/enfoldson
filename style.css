@@ -13,6 +13,7 @@ Template: enfold
 }
 
 #top a {
+  -webkit-transition: color .2s ease-in-out;
   transition: color .2s ease-in-out;
 }
 
@@ -80,7 +81,8 @@ Template: enfold
 }
 
 #top .av-main-nav ul {
-  box-shadow: 0 2px 4px rgba(21, 17, 52, 0.3);
+  -webkit-box-shadow: 0 2px 4px rgba(21, 17, 52, 0.3);
+          box-shadow: 0 2px 4px rgba(21, 17, 52, 0.3);
   min-width: 240px;
   width: auto;
 }
@@ -104,20 +106,6 @@ Template: enfold
   font-family: 'entypo-fontello';
   margin-left: .3em;
   opacity: .4;
-}
-
-#top .av-main-nav .menu-item-home .avia-menu-text {
-  display: none;
-}
-
-#top .av-main-nav .menu-item-home a::before {
-  content: '\e821';
-  font-family: 'entypo-fontello';
-  font-size: 120%;
-}
-
-#top .av-main-nav .menu-item-home .avia-menu-fx {
-  display: none;
 }
 
 #top #advanced_menu_toggle,
@@ -156,13 +144,16 @@ Template: enfold
   font-style: normal;
 }
 
+#top .widget_nav_menu li {
+  font-size: 1rem;
+}
+
 #top .widget_nav_menu a {
   padding: 0;
 }
 
 #top .widget_nav_menu a::before {
-  content: '\2015';
-  padding-right: .5em;
+  content: '\2015\00a0';
 }
 
 @media screen and (max-width: 480px) {
@@ -196,6 +187,7 @@ Template: enfold
 }
 
 #socket {
+  font-size: .8em;
   text-align: center;
 }
 
